@@ -1,16 +1,16 @@
-# Deploy to Deta Micro
+# Deta Deploy
+
+Deploy code to a [Deta](https://deta.sh) Micro.
+
+NOTE: This Action resolves [issues](https://github.com/BogDAAAMN/deta-deploy-action/issues/5) faced by [the Action it was based off of](https://github.com/BogDAAAMN/deta-deploy-action).
 
 <p align="center">
- <i>Lots of thanks to the <a href="https://github.com/Maxsior/BotCom">BotCom</a> folks for clarification and to the <b><a href="">Deta</a> folks</b> and for all the walkthroughs and hard work! 💕</i>
-</p>
-
-<p align="center">
-  <a href="https://github.com/BogDAAAMN/gh-action-deta-deploy-test/actions"><img alt="javscript-action status" src="https://github.com/BogDAAAMN/gh-action-deta-deploy-test/workflows/Deploy%20to%20Deta/badge.svg"></a>
+ <i>Lots of thanks to the <a href="https://github.com/Maxsior/BotCom">BotCom</a> folks for clarification and to the <b><a href="https://deta.sh">Deta</a> folks</b> and for all the walkthroughs and hard work! 💕</i>
 </p>
 
 ## Usage
 
-This is a simple GitHub Action to deploy current repo to a Deta Micro. Uses `deta deploy` command to deploy the latest changes as per [documentation](https://docs.deta.sh/docs/cli/commands/#deta-deploy). 
+This is a simple GitHub Action to deploy current repo to a Deta Micro. Uses `deta deploy` command to deploy the latest changes as per [documentation](https://docs.deta.sh/docs/cli/commands/#deta-deploy).
 
 ## Inputs
 
@@ -41,7 +41,7 @@ The name of the Deta project your Micro is part of. Used for `deta clone` comman
 
 ### `deta-project-dir`
 
-The name of the directory where the Deta code is located, in cases where the project is not located in the root directory. Default `.` (the root) 
+The name of the directory where the Deta code is located, in cases where the project is not located in the root directory. Default `.` (the root)
 
 ## Example action workflow
 
@@ -57,7 +57,7 @@ jobs:
       - uses: BogDAAAMN/deta-deploy-action@v1.0.1
         with:
           deta-access-token: ${{ secrets.DETA_TOKEN }} #Deta access token https://docs.deta.sh/docs/cli/auth
-          deta-name: 'micro-name' #Deta Micro name https://docs.deta.sh/docs/cli/commands/#deta-clone
-          deta-project: 'project-name' #Optional: Deta project name https://docs.deta.sh/docs/cli/commands/#deta-clone
-          deta-project-dir: 'other-dir' #Optional: directory to be deployed on Deta. Default is the root "." 
+          deta-name: "micro-name" #Deta Micro name https://docs.deta.sh/docs/cli/commands/#deta-clone
+          deta-project: "project-name" #Optional: Deta project name https://docs.deta.sh/docs/cli/commands/#deta-clone
+          deta-project-dir: "other-dir" #Optional: directory to be deployed on Deta. Default is the root "."
 ```
